@@ -3,12 +3,12 @@ import Vue from 'vue'
 import VueFlashMessage from 'vue-flash-message';
 
 import 'vue-flash-message/dist/vue-flash-message.min.css'
-Vue.use(VueFlashMessage),{
-    messgaeOptions:{
-        timeout :3000,
-        pauseOnInteract:true
+Vue.use(VueFlashMessage, {
+    messageOptions: {
+      timeout: 2000,
+      pauseOnInteract: true
     }
-};
+  });
 
 const vm = new Vue();
 const BASE_URL = 'http://localhost:3000/tasks/'

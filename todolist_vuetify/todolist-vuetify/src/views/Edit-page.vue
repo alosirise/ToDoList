@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Edit tasks</h1>
+        <h1 class="ma-4">Edit tasks</h1>
         <flash-message></flash-message>
        <task-form @createOrUpdate="createOrUpdate" :task=this.task></task-form>
     </div>
@@ -22,7 +22,7 @@ export default{
     methods:{
         createOrUpdate: async function(task){
             await api.updatetask(task);
-            this.flash('task updated success!','success');
+            this.flash('Task updated !!','success');
             this.$router.push(`/tasks/${task._id}`);
         }
     },
@@ -33,3 +33,10 @@ export default{
 
 
 </script>
+<style>
+.routerLink{
+     text-decoration: none;
+ }
+
+ 
+</style>

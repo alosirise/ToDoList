@@ -13,15 +13,15 @@
     background-color="primary"
     dark
   >
-    <v-tab>        
-     <router-link to="/tasks" style="color: white" exact class ="item routerLink">   
-        <i class = "tasks icon" ></i> Tasks
-     </router-link>
+    <v-tab to="/tasks" style="color: white" exact class ="item routerLink">        
+     
+       <i class="fa-solid fa-plus"></i>Tasks
+ 
     </v-tab>
-    <v-tab>
-       <router-link to="/tasks/add" style="color: white" exact class ="item routerLink">
+    <v-tab to="/tasks/add" style="color: white" exact class ="item routerLink">
+
          <i class = "tasks icon"> </i> Add 
-       </router-link>  
+  
     </v-tab>
   </v-tabs>
          
@@ -36,7 +36,7 @@
       <v-container>
         <v-col>
             <router-view/>
-</v-col>
+        </v-col>
       </v-container>
     </v-main>
   </v-app>

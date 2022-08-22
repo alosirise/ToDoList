@@ -1,13 +1,14 @@
 <template>
 <div>
-    <h1>Add</h1>
+    <h1 class="ma-4">Add tasks</h1>
     <task-form @createOrUpdate="createOrUpdate"></task-form>
     </div>
 </template>
 
 <script>
-import taskForm from '../components/TaskForm.vue'
 import {api} from '../helper/Helpers'
+import taskForm from '../components/TaskForm.vue'
+
 
 export default
 {
@@ -18,7 +19,7 @@ export default
     methods :{
         createOrUpdate : async function(task){
             const res = await api.createtask(task);
-            this.flash('task created' ,'success');
+            this.flashSuccess('Task Created !!' ,'success');
             this.$router.push(`/tasks/${res._id}`);
         }
     }
